@@ -163,13 +163,13 @@ Gets 10 recipes at a time
 Since we have only 4 records for british we can test by getting 2 records at a time. you should see pagination in json object which provides counts, limit and offset
 
 
-    http://localhost:5000/gousto/api/v1.0/recipes/cuisine/british?offset=0&limit=2 (first 2 records)
+    https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/cuisine/british?offset=0&limit=2 (first 2 records)
 
-    http://localhost:5000/gousto/api/v1.0/recipes/cuisine/british?offset=2&limit=2 (next 2 records)
+    https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/cuisine/british?offset=2&limit=2 (next 2 records)
 
 I have also added a field filtering parameter which can be used to add, remove additional fields
 
-    http://localhost:5000/gousto/api/v1.0/recipes/cuisine/british?fields=id,slug,title
+    https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/cuisine/british?fields=id,slug,title
 
 
 Faq
@@ -177,20 +177,22 @@ Faq
 
 **How to use your solution?**
 
-I have provided api documentation regarding rest routes above and provided examples.
-For production I would add a caching layer like varnish in front of api for GET requests. POST requests will remain uncached
+- I have provided api documentation regarding rest routes above and provided examples.
+- For production I would add a caching layer like varnish in front of api for GET requests. POST requests will remain uncached
 
 **Your reasons for your choice of web application framework?**
 
-I considered using Laravel, Lumen or Symfony but choose Flask. Since we  want to avoid using database I ended using Flask microframework on python.
-I used Pandas Python library as it is very good for processing CSV file the preferred source of the application
+- I considered using Laravel, Lumen or Symfony but choose Flask. Since we  want to avoid using database I ended using Flask microframework on python.
+- I used Pandas Python library as it is very good for processing CSV file the preferred source of the application
 
 **Explain how your solution would cater for different API consumers that require different recipe data e.g. a mobile app and the front-end of a website**
 
-For frontend website I would set limit to 10 to get 10 records at a time.
-For mobile application I would use limit to 5 to reduce no of records at a time. Also I would add fields parameter to limit fields required. See example for details
-For example for getting recipes I can pass just id and title to  http://localhost:5000/gousto/api/v1.0/recipes/cuisine/british?offset=0&limit=5&fields=id,title if we don't need any other fields
-This would reduce bandwidth consumption on mobile.
+- For Frontend website I would set limit to 10 to get 10 records at a time.
+- For Mobile application I would use limit to 5 to reduce no of records at a time. Also I would add fields parameter to limit fields required.
+- For example for getting recipes I can pass just id and title to  http://localhost:5000/gousto/api/v1.0/recipes/cuisine/british?offset=0&limit=5&fields=id,title if we don't need any other fields
+- We can also add field filtering while getting row https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/1?fields=id,title
+- This would reduce bandwidth consumption on mobile.
+
 
 **Anything else you think is relevant to your solution?**
 
