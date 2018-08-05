@@ -14,7 +14,7 @@ def add_recipe():
     """ Add a recipe
     """
 
-    validate_request(request)
+    validate_request()
 
     recipe_obj = rp.Recipe(db_connection)
     row = recipe_obj.add_recipe(request.json)

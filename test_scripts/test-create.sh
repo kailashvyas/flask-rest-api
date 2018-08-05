@@ -32,5 +32,6 @@ curl -i -H "Content-Type: application/json" -X POST -d '{
     "marketing_description": "Tamil Nadu is a state on the eastern coast of the southern tip of India. Curry from there is particularly famous and its easy to see why. This one is brimming with exciting contrasting tastes from ingredients like chilli powder, coriander and fennel seed",
     "origin_country": "Great Britain",
     "recipe_cuisine": "italian",
-    "title": "bhindi bhajee"
-  }' http://localhost:5000/gousto/api/v1.0/recipes/8
+    "title": "bhindi bhajee",
+    "recipe_diet_type_id": "fish"
+  }' http://localhost:5000/gousto/api/v1.0/recipes

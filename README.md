@@ -1,5 +1,5 @@
-Flask-REST-recipes
-=========
+Flask-REST-Api
+==============
 
 Api for displaying, adding, updating and rating recipes
 
@@ -19,6 +19,16 @@ To run the server use the following command:
      * Running on http://127.0.0.1:5000/
 
 Then from a different terminal window or browser you can send requests.
+
+Heroku Deployment
+-----------------
+
+https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/cuisine/british (Recipes by cuisine)
+https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/1 (Recipes by id)
+
+Application is deployed to heroku and add, update and rating can be tested by running heroku-tests.sh in test_scripts
+
+    $ sh heroku-tests.sh
 
 Tests
 -----
