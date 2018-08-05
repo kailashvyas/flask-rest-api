@@ -23,8 +23,8 @@ Then from a different terminal window or browser you can send requests.
 Heroku Deployment
 -----------------
 
-https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/cuisine/british (Recipes by cuisine)
-https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/1 (Recipes by id)
+- https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/cuisine/british (Recipes by cuisine)
+- https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/1 (Recipes by id)
 
 Application is deployed to heroku and add, update and rating can be tested by running heroku-tests.sh in test_scripts
 
@@ -158,7 +158,7 @@ This will rate recipe id 8 with rating 5
 To get recipes by cuisine.
 Gets 10 recipes at a time
 
-    http://localhost:5000/gousto/api/v1.0/recipes/cuisine/british
+    https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/cuisine/british
 
 Since we have only 4 records for british we can test by getting 2 records at a time. you should see pagination in json object which provides counts, limit and offset
 
@@ -189,9 +189,9 @@ Faq
 
 - For Frontend website I would set limit to 10 to get 10 records at a time.
 - For Mobile application I would use limit to 5 to reduce no of records at a time. Also I would add fields parameter to limit fields required.
-- For example for getting recipes I can pass just id and title to  http://localhost:5000/gousto/api/v1.0/recipes/cuisine/british?offset=0&limit=5&fields=id,title if we don't need any other fields
+- For example for getting recipes I can pass just id and title to  https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/cuisine/british?offset=0&limit=5&fields=id,title if we don't need any other fields
 - We can also add field filtering while getting row https://salty-bastion-31857.herokuapp.com/gousto/api/v1.0/recipes/1?fields=id,title
-- This would reduce bandwidth consumption on mobile.
+- This would reduce bandwidth consumption on mobile and only load what is required for mobile application.
 
 
 **Anything else you think is relevant to your solution?**
