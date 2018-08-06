@@ -46,7 +46,7 @@ API Documentation
     - The body must contain a JSON object that defines **'id','created_at' 'updated_at' 'box_type' 'title' 'slug' 'short_title' 'marketing_description' 'calories_kcal' 'protein_grams' 'fat_grams' 'carbs_grams' 'bulletpoint1' 'bulletpoint2' 'bulletpoint3' 'recipe_diet_type_id' 'season' 'base' 'protein_source' 'preparation_time_minutes' 'shelf_life_days' 'equipment_needed' 'origin_country' 'recipe_cuisine' 'in_your_box' 'gousto_reference'** fields.
     - Mandatory fields are **'title', 'marketing_description', 'recipe_diet_type_id', 'recipe_cuisine', 'gousto_reference'**. Others are optional
     - Query parameter fields can be passed for field filtering
-    - On success a status code 201 is returned. The body of the response contains a JSON object with the newly added recipe.
+    - On success a status code 200 is returned. The body of the response contains a JSON object with the newly added recipe.
     - On failure status code 400 (bad request) is returned.
 
 - PUT **/gousto/api/v1.0/recipes/&lt;int:id&gt;**
