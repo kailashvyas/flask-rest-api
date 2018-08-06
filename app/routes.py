@@ -58,7 +58,7 @@ def recipes(cuisine):
     """
     recipe_obj = rp.Recipe(db_connection)
     offset = request.args.get('offset', 0)
-    limit = request.args.get('limit', 2)
+    limit = request.args.get('limit', 10)
     fields = request.args.get('fields', 'id,slug,title,recipe_cuisine,recipe_diet_type_id,gousto_reference,created_at,updated_at')
     results = recipe_obj.get_recipes_by_cuisine(cuisine, int(offset), int(limit), fields)
 

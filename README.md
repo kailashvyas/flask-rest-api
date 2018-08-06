@@ -37,6 +37,11 @@ To run unit tests run following command
 
     $ python tests.py
 
+Coding Standards
+----------------
+
+Code is written in  PEP 8 code standards https://www.python.org/dev/peps/pep-0008/
+
 API Documentation
 -----------------
 
